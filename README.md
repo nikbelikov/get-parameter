@@ -16,9 +16,18 @@ var getParameter = require('get-parameter');
 
 var productId = getParameter('id');
 console.log(productId);
+
+// return all get queries
+var getParams = getParameter();
+// result example:
+/* {
+  "id":"2",
+  "redirect":"true"
+} */
 ```
 
 ## Release History
+* 1.0.3: Return all get queries.
 * 1.0.2: Move repo.
 * 1.0.1: Small update.
 * 1.0.0: Initial release.
