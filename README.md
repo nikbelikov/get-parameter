@@ -27,6 +27,7 @@ var getParams = getParameter();
 ```
 
 ## Release History
+* 1.0.4: Add gruntfile.
 * 1.0.3: Return all get queries.
 * 1.0.2: Move repo.
 * 1.0.1: Small update.
