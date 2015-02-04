@@ -8,6 +8,7 @@
 // ------------------------------------------------------------
 
 module.exports = function getParameter(name){
+  'use strict';
   var queryDict = {};
   location.search.substr(1).split('&').forEach(function(item) {queryDict[item.split('=')[0]] = decodeURIComponent(item.split('=')[1])});
   
