@@ -1,4 +1,4 @@
-Get Parameter
+Get Parameter [![npm version](https://badge.fury.io/js/get-parameter.svg)](http://badge.fury.io/js/get-parameter) [![Build Status](https://travis-ci.org/ryanburgess/get-parameter.svg?branch=master)](https://travis-ci.org/ryanburgess/get-parameter)
 ======
 
 Get Parameter is a simple JavaScript module that returns query string values in JavaScript.
@@ -27,6 +27,7 @@ var getParams = getParameter();
 ```
 
 ## Release History
+* 1.0.6: Add tests.
 * 1.0.5: Add 'use strict' and gitignore.
 * 1.0.4: Add gruntfile.
 * 1.0.3: Return all get queries.
