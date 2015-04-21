@@ -10,7 +10,7 @@
 module.exports = function getParameter(name){
   var queryDict = {};
   var queries = location.search.substr(1).split('&');
-  for (i in queries) {
+  for (i=0; i<queries.length; i++) {
     queryDict[queries[i].split('=')[0]] = decodeURIComponent(queries[i].split('=')[1]);
   } 
 
