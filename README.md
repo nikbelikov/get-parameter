@@ -27,6 +27,7 @@ var getParams = getParameter();
 ```
 
 ## Release History
+* 1.0.7: Add support for IE8 and below. [Issue #3](https://github.com/ryanburgess/get-parameter/pull/3)
 * 1.0.6: Add tests.
 * 1.0.5: Add 'use strict' and gitignore.
 * 1.0.4: Add gruntfile.

@@ -1,6 +1,6 @@
 {
   "name": "get-parameter",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Get Parameter is a simple JavaScript module that returns query string values in JavaScript.",
   "main": "index.js",
   "scripts": {
