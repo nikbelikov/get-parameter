@@ -9,8 +9,11 @@
 
 module.exports = function getParameter(name){
   var queryDict = {};
-  location.search.substr(1).split('&').forEach(function(item) {queryDict[item.split('=')[0]] = decodeURIComponent(item.split('=')[1])});
-  
+  var queries = location.search.substr(1).split('&');
+  for (i in queries) {
+    queryDict[queries[i].split('=')[0]] = decodeURIComponent(queries[i].split('=')[1]);
+  } 
+
   // if name specified, return that specific get parameter
   if (name) {
     return queryDict.hasOwnProperty(name) ? decodeURIComponent(queryDict[name].replace(/\+/g, ' ')) : '';
