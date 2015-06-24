@@ -21,8 +21,11 @@ module.exports = function(grunt) {
     },
     jsonlint: {
       sample: {
-        src: [ '**/*.json' ]
+        src: [ 'package.json' ]
       }
+    },
+    nodeunit: {
+      all: ['test.js']
     },
     watch: {
       scripts: {
@@ -44,5 +47,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-jsonlint');
+  grunt.loadNpmTasks('grunt-contrib-nodeunit');
+  grunt.registerTask('test',['jsonlint', 'jshint']);
   grunt.registerTask('default',['watch']);
 };

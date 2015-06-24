@@ -21,4 +21,4 @@ module.exports = function getParameter(name){
   }
 
   return queryDict;
-}
+};

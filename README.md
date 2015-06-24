@@ -27,6 +27,7 @@ var getParams = getParameter();
 ```
 
 ## Release History
+* 1.0.9: Add JSHint and JSONLint to tests.
 * 1.0.8: Merge [Issue #4](https://github.com/ryanburgess/get-parameter/pull/4)
 * 1.0.7: Add support for IE8 and below. [Issue #3](https://github.com/ryanburgess/get-parameter/pull/3)
 * 1.0.6: Add tests.
