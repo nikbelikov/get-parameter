@@ -7,17 +7,21 @@
 // Returns: value
 // ------------------------------------------------------------
 
+const windowIsDefined = () => typeof window !== 'undefined';
+
 module.exports = function getParameter(name){
   'use strict';
-  var queryDict = {};
-  var queries = location.search.substr(1).split('&');
-  for (var i=0; i<queries.length; i++) {
-    queryDict[queries[i].split('=')[0]] = decodeURIComponent(queries[i].split('=')[1]);
-  } 
+  const queryDict = {};
+  const queries = windowIsDefined() ? window.location.search.substr(1).split('&') : [];
 
-  // if name specified, return that specific get parameter
+  for (let i = 0; i < queries.length; i += 1) {
+    queryDict[queries[i].split('=')[0]] = decodeURIComponent(queries[i].split('=')[1]);
+  }
+
   if (name) {
-    return queryDict.hasOwnProperty(name) ? decodeURIComponent(queryDict[name].replace(/\+/g, ' ')) : '';
+    return Object.prototype.hasOwnProperty.call(queryDict, name)
+      ? decodeURIComponent(queryDict[name].replace(/\+/g, ' '))
+      : '';
   }
 
   return queryDict;
