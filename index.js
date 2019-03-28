@@ -7,7 +7,9 @@
 // Returns: value
 // ------------------------------------------------------------
 
-const windowIsDefined = () => typeof window !== 'undefined';
+const windowIsDefined = function () {
+  return typeof window !== 'undefined';
+};
 
 module.exports = function getParameter(name){
   'use strict';
